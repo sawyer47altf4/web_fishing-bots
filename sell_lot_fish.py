@@ -1,12 +1,15 @@
-import pyautogui as ag
+import pyautogui
 import time
 import keyboard
 # add ETA, for time it will take and add a way to calculate the amount of fish there are
+
+"""sells fish then add it to a counter called fish sold"""
 def sell_fish(time_delay, fish_sold):
-    ag.click()
-    fish_sold += 1
-    time.sleep(time_delay)
-    return fish_sold
+    while keyboard.is_pressed("esc") == False:
+        pyautogui.click()
+        fish_sold += 1
+        time.sleep(time_delay)
+        print(fish_sold)
 
 if __name__ == "__main__":
     print("3")
@@ -15,5 +18,4 @@ if __name__ == "__main__":
     time.sleep(1)
     print("1")
 
-    while keyboard.is_pressed("esc") == False:
-       print(sell_fish(3, 0))
+    sell_fish(3, 0)
