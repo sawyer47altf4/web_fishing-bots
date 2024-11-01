@@ -20,7 +20,7 @@ print("2")
 time.sleep(1)
 print("1")
 
-while keyboard.is_pressed("q") == False:
+while keyboard.is_pressed("esc") == False:
     
     hold_key("a") # move left
     
