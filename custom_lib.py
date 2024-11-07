@@ -1,6 +1,7 @@
 import pyautogui
 import time
 import keyboard
+import math
 
 def hold_key(key, duration=1):
     """Hold a key down for a specified duration."""
@@ -55,5 +56,12 @@ def check_for_fish():
 
 #def catch_fish():
 
-#def check_for_clicks_on_rod():
-    
+def check_for_clicks_on_rod():
+    # x= 564, y= 222
+    # x=294 , y=665
+    x1 = 564
+    y1 = 222
+    x2 = 294
+    y2 = 665
+    m = (y2 - y1) / (x2 - x1)
+    print(m)
